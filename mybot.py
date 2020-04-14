@@ -33,4 +33,4 @@ def read_first_line():
     #return the first link
     return first_line   
 
-client.run('YOUR_BOT_TOKEN HERE') #your bot's unique token
+client.run('Njk5Mzc5NTc5OTE1MDc1NjM0.XpVgnQ.TvH-0YTAGS49805YmaOvZo-O6U4') #your bot's unique token
