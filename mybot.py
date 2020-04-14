@@ -19,8 +19,8 @@ def read_first_line():
         data = f.read().splitlines(True)
     with open('links.txt','w') as f:
         f.writelines(data)
-    with open('hist.txt.','w') as f:
-        f.writelines(first_line)
+    with open('hist.txt.','a') as f:
+        f.write(first_line )
     return first_line
 
 client.run('YOUR_BOT_TOKEN HERE')
