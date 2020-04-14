@@ -1,15 +1,17 @@
-import discord
+import discord  # importing discorapp's API. Link =  https://discordpy.readthedocs.io/en/latest/api.html
 from discord.ext import commands
 
 client = commands.Bot(command_prefix='.')
 
+# on_ready : inbuilt discord API's function to check bot is up.
 @client.event
 async def on_ready():
     print('Running...') # just a message to show on console that will let developer know bot is running.
 
+# on_message : for when someone sends a message
 @client.event
 async def on_message(message):
-    #checking 1. the message 2. the channel of message 3. author of the messsage so only particular person can use it
+    # checking 1. the message 2. the channel of message 3. author of the messsage so only particular person can use it
     if message.content.startswith('!newchallenge') and message.channel == client.get_channel(698794122894508043) and message.author.id == 629017996945391662 :
         await message.channel.send(read_first_line())  #calling function read_first_line()
         await message.channel.send("Hey @everyone, today's problem to solve. #KeepPracticing")
